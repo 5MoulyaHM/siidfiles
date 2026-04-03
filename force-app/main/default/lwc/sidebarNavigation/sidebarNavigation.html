@@ -1,0 +1,64 @@
+<template>
+    <div class="sidebar-container">
+        <!-- User Profile Section -->
+        <div class="user-section">
+            <lightning-icon icon-name="standard:avatar" size="medium"></lightning-icon>
+            <span class="user-label">Me</span>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="navigation-menu">
+            <template for:each={menuItems} for:item="item">
+                <div key={item.id} class="menu-item-wrapper">
+                    <!-- Main Menu Item -->
+                    <div 
+                        class={item.cssClass}
+                        data-id={item.id}
+                        onclick={handleMenuClick}>
+                        
+                        <div class="menu-content">
+                            <lightning-icon 
+                                icon-name={item.icon} 
+                                size="small" 
+                                class="menu-icon">
+                            </lightning-icon>
+                            <span class="menu-label">{item.label}</span>
+                            
+                            <!-- Badge for notifications -->
+                            <template if:true={item.badge}>
+                                <span class="notification-badge">{item.badge}</span>
+                            </template>
+                        </div>
+
+                        <!-- Expand/Collapse Icon -->
+                        <template if:true={item.subItems}>
+                            <lightning-icon 
+                                icon-name={item.expandIcon} 
+                                size="x-small" 
+                                class="expand-icon">
+                            </lightning-icon>
+                        </template>
+                    </div>
+
+                    <!-- Sub Menu Items -->
+                    <template if:true={item.isExpanded}>
+                        <div class="submenu-container">
+                            <template for:each={item.subItems} for:item="subItem">
+                                <div 
+                                    key={subItem.id} 
+                                    class="submenu-item"
+                                    data-link={subItem.link}
+                                    onclick={handleSubItemClick}>
+                                    <span class="submenu-label">{subItem.label}</span>
+                                    <template if:true={subItem.badge}>
+                                        <span class="submenu-badge">{subItem.badge}</span>
+                                    </template>
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </nav>
+    </div>
+</template>

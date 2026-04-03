@@ -1,0 +1,136 @@
+.sidebar-container {
+    background-color: #1a3a52;
+    height: 100%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    overflow-y: auto;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.navigation-menu {
+    padding: 0.5rem 0;
+}
+
+.menu-item-wrapper {
+    margin-bottom: 0.25rem;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.menu-item.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border-left: 3px solid #1b96ff;
+}
+
+.menu-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.menu-icon {
+    color: currentColor;
+}
+
+.menu-label {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.notification-badge {
+    background-color: #ea001e;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 0.125rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+}
+
+.expand-icon {
+    color: rgba(255, 255, 255, 0.6);
+    transition: transform 0.2s;
+}
+
+.submenu-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.25rem 0;
+}
+
+.submenu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 1rem 0.625rem 3rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.submenu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.submenu-label {
+    font-size: 0.8125rem;
+}
+
+.submenu-badge {
+    background-color: #1b96ff;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 0.125rem 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    min-width: 18px;
+    text-align: center;
+}
+
+/* Scrollbar styling */
+.sidebar-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}

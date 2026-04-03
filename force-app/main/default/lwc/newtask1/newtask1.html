@@ -1,0 +1,83 @@
+<template>
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="header-left">
+            <span class="bank-title">Standard Bank <span class="intl">International</span></span>
+        </div>
+ 
+        <div class="header-center">
+            <img src={bankLogo} class="logo-center" alt="Bank Logo" />
+        </div>
+ 
+        <div class="header-right">
+            <span class="username">
+                <lightning-icon icon-name="utility:user" size="x-small"></lightning-icon>
+                User name ▼
+            </span>
+ 
+            <span class="signout">
+                <lightning-icon icon-name="utility:lock" size="x-small"></lightning-icon>
+                SIGN OUT
+            </span>
+        </div>
+    </header>
+ 
+    <!-- ================= MAIN CARD ================= -->
+    <div class="main-wrapper">
+        <div class="white-card">
+ 
+            <div class="success-icon">
+                <img src={successIcon} class="success-img" />
+            </div>
+ 
+            <h1 class="title">Congratulations!</h1>
+            <p class="subtitle">Your Optimum Bank Account has been opened</p>
+ 
+            <div class="card-row">
+                <img src={cardImage} class="debit-card" />
+ 
+                <div class="details">
+                    <h2>Account Details</h2>
+ 
+                    <div class="row">
+                        <span class="label">Customer number</span>
+                        <span class="value">{customerNumber}</span>
+                    </div>
+ 
+                    <div class="row">
+                        <span class="label">Account Number</span>
+                        <span class="value">{accountNumber}</span>
+                    </div>
+ 
+                    <div class="row">
+                        <span class="label">Date account opened</span>
+                        <span class="value">{openedDate}</span>
+                    </div>
+ 
+                    <div class="row">
+                        <span class="label">Account Funding Balance</span>
+                        <span class="value bold">{fundingBalance}</span>
+                    </div>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+ 
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a>ADVISORS</a>
+            <a>REGULATORY</a>
+            <a>LEGAL</a>
+            <a>PRIVACY STATEMENTS</a>
+            <a>TERMS AND CONDITIONS</a>
+        </div>
+ 
+        <p class="disclaimer">
+            Standard Bank Isle of Man Limited (“SBIoM”) is licensed by the Isle of Man Financial Services Authority.
+            Standard Bank House, One Circular Road, Douglas, Isle of Man, IM1 1SB.
+            Registered in the Isle of Man No.4713C.
+        </p>
+    </footer>
+</template>

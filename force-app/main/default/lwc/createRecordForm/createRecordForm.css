@@ -1,0 +1,8 @@
+lightning-card {
+    max-width: 600px;
+    margin: auto;
+}
+
+.slds-p-around_medium {
+    padding: 1rem;
+}

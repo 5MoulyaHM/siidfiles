@@ -1,0 +1,8 @@
+.no-typing lightning-input input {
+    pointer-events: none; /* block typing */
+}
+
+.no-typing lightning-input input::-webkit-calendar-picker-indicator {
+    pointer-events: auto; /* allow calendar icon */
+    opacity: 1;
+}

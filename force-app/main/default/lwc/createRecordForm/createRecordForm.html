@@ -1,0 +1,11 @@
+<template>
+    <div class="create-form">
+        <lightning-record-form
+            object-api-name={objectApiName}
+            record-type-id={recordTypeId}
+            fields={fieldsArray}
+            mode="edit"
+            onsuccess={handleSuccess}>
+        </lightning-record-form>
+    </div>
+</template>

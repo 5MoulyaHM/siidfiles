@@ -1,0 +1,26 @@
+<template>
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+        <thead>
+            <tr><th>Name</th><th>Phone</th><th>Type</th></tr>
+        </thead>
+        <tbody>
+            <template for:each={accounts} for:item="acc">
+                <tr key={acc.Id}>
+                    <td>{acc.Name}</td>
+                    <td>{acc.Phone}</td>
+                    <td>{acc.Type}</td>
+                </tr>
+            </template>
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <button onclick={prev} disabled={isFirst}>&lt;</button>
+        <template for:each={pages} for:item="p">
+            <button key={p.label} class={p.className} data-id={p.label} onclick={goPage}>
+                {p.label}
+            </button>
+        </template>
+        <button onclick={next} disabled={isLast}>&gt;</button>
+    </div>
+</template>

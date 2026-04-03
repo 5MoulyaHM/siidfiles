@@ -1,0 +1,14 @@
+<template>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+            <template for:each={breadcrumbs} for:item="crumb">
+                <li key={crumb.label}>
+                    <a href={crumb.url}>{crumb.label}</a>
+                    <template if:false={crumb.isLast}>
+                        <span class="separator">›</span>
+                    </template>
+                </li>
+            </template>
+        </ol>
+    </nav>
+</template>

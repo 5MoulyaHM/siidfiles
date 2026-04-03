@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="GitHub Integration">
+        <div class="slds-p-around_medium">
+            <lightning-button 
+                label="Login with GitHub"
+                variant="brand"
+                onclick={handleLogin}>
+            </lightning-button>
+
+            <template if:true={repos}>
+                <p class="slds-m-top_medium"><b>Your Repositories:</b></p>
+                <ul>
+                    <template for:each={repos} for:item="repo">
+                        <li key={repo}>{repo}</li>
+                    </template>
+                </ul>
+            </template>
+        </div>
+    </lightning-card>
+</template>
