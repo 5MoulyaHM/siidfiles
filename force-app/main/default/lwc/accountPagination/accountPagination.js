@@ -12,6 +12,7 @@ export default class AccountPaginationSmall extends LightningElement {
     connectedCallback() {
         this.loadTotal();
         this.loadAccounts();
+        //dg
     }
 
     loadTotal() {
