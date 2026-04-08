@@ -18,6 +18,7 @@ export default class AccountPaginationSmall extends LightningElement {
         getTotalPages({ pageSize: this.pageSize }).then(t => {
             this.totalPages = t;
             this.makePages();
+            console.log('mou');
         });
     }
 
