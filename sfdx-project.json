@@ -5,8 +5,7 @@
       "default": true
     }
   ],
-  "name": "Sidproj",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "66.0"
+  "sourceApiVersion": "60.0"
 }

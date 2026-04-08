@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Student Courses">
+        <div class="slds-p-around_medium">
+            <template if:true={courses}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={courses}
+                    columns={columns}
+                    hide-checkbox-column="true">
+                </lightning-datatable>
+            </template>
+            <template if:true={error}>
+                <p class="slds-text-color_error">{error}</p>
+            </template>
+        </div>
+
+        <div class="slds-p-around_medium">
+            <lightning-input label="Course Name" value={newCourseName} onchange={handleNameChange}></lightning-input>
+            <lightning-input type="number" label="Fee" value={newCourseFee} onchange={handleFeeChange}></lightning-input>
+            <lightning-button label="Add Course" variant="brand" onclick={handleAddCourse}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
